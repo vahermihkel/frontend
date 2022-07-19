@@ -10,6 +10,9 @@ function AdminHome() {
       <Link to="/halda-tooteid">
         <Button>Halda tooteid</Button>
       </Link>
+      <Link to="/halda-kategooriaid">
+        <Button>Halda kategooriaid</Button>
+      </Link>
     </div>
    );
 }

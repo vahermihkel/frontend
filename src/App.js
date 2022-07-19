@@ -7,6 +7,7 @@ import AdminHome from './pages/AdminHome';
 import EditProduct from './pages/EditProduct';
 import MaintainProducts from './pages/MaintainProducts';
 import Cart from './pages/Cart';
+import Category from './pages/Category';
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
           <Route path="/lisa-toode" element={ <AddProduct /> } />
           <Route path="/muuda-toode/:id" element={ <EditProduct /> } />
           <Route path="/halda-tooteid" element={ <MaintainProducts /> } />
+          <Route path="/halda-kategooriaid" element={ <Category /> } />
         </Routes>
     </div>
   );
