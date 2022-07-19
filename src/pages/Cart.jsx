@@ -6,7 +6,7 @@ function Cart() {
   const [cart, setCart] = useState(JSON.parse(localStorage.getItem("cartProducts")) || [])
   
   useEffect(() => {
-    fetch("http://localhost:8080/parcel-machines/" + country)
+    fetch("https://mihkel-java.herokuapp.com/parcel-machines/" + country)
       .then(res => res.json())
       .then(data => setParcelMachines(data.omnivaParcelMachines));
   }, [country]);
@@ -25,7 +25,7 @@ function Cart() {
   }
 
   const pay = () => {
-    fetch("http://localhost:8080/payment/3131231",{
+    fetch("https://mihkel-java.herokuapp.com/payment/3131231",{
       method: "POST",
       body: JSON.stringify(cart),
       headers: {

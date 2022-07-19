@@ -13,14 +13,14 @@ function EditProduct() {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8080/categories")
+    fetch("https://mihkel-java.herokuapp.com/categories")
       .then(res => res.json())
       .then(data => setCategories(data));
   }, []);
 
   // uef
   useEffect(() => {
-    fetch("http://localhost:8080/products/" + id)
+    fetch("https://mihkel-java.herokuapp.com/products/" + id)
       .then(res => res.json())
       .then(data => setProduct(data))
   }, [id]);
@@ -36,7 +36,7 @@ function EditProduct() {
       },
       active: activeRef.current.checked
     }
-    fetch("http://localhost:8080/products",{
+    fetch("https://mihkel-java.herokuapp.com/products",{
       method: "PUT",
       body: JSON.stringify(newProduct),
       headers: {

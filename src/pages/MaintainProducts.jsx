@@ -5,21 +5,21 @@ function MaintainProducts() {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8080/products")
+    fetch("https://mihkel-java.herokuapp.com/products")
     .then(res => res.json())
     .then(data => setProducts(data));
     // products = data;
   }, []);
 
   const deleteProduct = (productId) => {
-    fetch("http://localhost:8080/products/" + productId,{
+    fetch("https://mihkel-java.herokuapp.com/products/" + productId,{
       method: 'DELETE'
     }).then(res => res.json())
     .then(data => setProducts(data));
   }
 
   const decreaseStock = (product) => {
-    fetch("http://localhost:8080/decrease-stock", {
+    fetch("https://mihkel-java.herokuapp.com/decrease-stock", {
       method: 'PATCH',
       body: JSON.stringify(product),
       headers: {
@@ -30,7 +30,7 @@ function MaintainProducts() {
   }
 
   const increaseStock = (product) => {
-    fetch("http://localhost:8080/increase-stock", {
+    fetch("https://mihkel-java.herokuapp.com/increase-stock", {
       method: 'PATCH',
       body: JSON.stringify(product),
       headers: {

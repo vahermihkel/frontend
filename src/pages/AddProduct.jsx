@@ -9,7 +9,7 @@ function AddProduct() {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8080/categories")
+    fetch("https://mihkel-java.herokuapp.com/categories")
       .then(res => res.json())
       .then(data => setCategories(data));
   }, []);
@@ -24,7 +24,7 @@ function AddProduct() {
       },
       active: activeRef.current.checked
     }
-    fetch("http://localhost:8080/products",{
+    fetch("https://mihkel-java.herokuapp.com/products",{
       method: "POST",
       body: JSON.stringify(newProduct),
       headers: {

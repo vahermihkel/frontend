@@ -4,7 +4,7 @@ function HomePage() {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8080/active-products")
+    fetch("https://mihkel-java.herokuapp.com/active-products")
     .then(res => res.json())
     .then(data => setProducts(data));
     // products = data;
