@@ -13,14 +13,14 @@ function MaintainProducts() {
 
   const deleteProduct = (productId) => {
     fetch("https://mihkel-java.herokuapp.com/products/" + productId,{
-      method: 'DELETE'
+      method: "DELETE"
     }).then(res => res.json())
     .then(data => setProducts(data));
   }
 
   const decreaseStock = (product) => {
     fetch("https://mihkel-java.herokuapp.com/decrease-stock", {
-      method: 'PATCH',
+      method: "PATCH",
       body: JSON.stringify(product),
       headers: {
         "Content-Type": "application/json"
@@ -31,7 +31,7 @@ function MaintainProducts() {
 
   const increaseStock = (product) => {
     fetch("https://mihkel-java.herokuapp.com/increase-stock", {
-      method: 'PATCH',
+      method: "PATCH",
       body: JSON.stringify(product),
       headers: {
         "Content-Type": "application/json"
