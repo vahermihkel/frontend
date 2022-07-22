@@ -24,6 +24,7 @@ function App() {
           <Route path="/muuda-toode/:id" element={ <EditProduct /> } />
           <Route path="/halda-tooteid" element={ <MaintainProducts /> } />
           <Route path="/halda-kategooriaid" element={ <Category /> } />
+          <Route path="/tellimus" element={ <PaymentCompleted /> } />
         </Routes>
     </div>
   );

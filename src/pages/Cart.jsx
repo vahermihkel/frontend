@@ -25,6 +25,7 @@ function Cart() {
   }
 
   const pay = () => {
+    // http://localhost:8080/payment/3131231
     fetch("https://mihkel-java.herokuapp.com/payment/3131231",{
       method: "POST",
       body: JSON.stringify(cart),

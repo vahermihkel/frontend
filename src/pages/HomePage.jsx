@@ -30,6 +30,7 @@ function HomePage() {
         <div key={product.id}>
           <img className='product-picture' src={product.imgSrc} alt="" />
           <div>{product.name}</div>
+          <div>{product.price}</div>
           <button onClick={() => addToCart(product)}>Lisa ostukorvi</button>
         </div>)}
     </div>
