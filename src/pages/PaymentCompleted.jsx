@@ -12,6 +12,9 @@ function PaymentCompleted() {
     body: {
       order_reference: order_reference,
       payment_reference: payment_reference
+    },
+    headers: {
+      "Content-Type": "application/json"
     }
     }).then(res => res.json())
     .then(data => setPaymentState(data.payment_state));
