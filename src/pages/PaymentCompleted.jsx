@@ -9,10 +9,10 @@ function PaymentCompleted() {
   useEffect(() => {
     fetch("https://mihkel-java.herokuapp.com/check-payment", {
     method: "POST",
-    body: {
+    body: JSON.stringify({
       order_reference: order_reference,
       payment_reference: payment_reference
-    },
+    }),
     headers: {
       "Content-Type": "application/json"
     }
