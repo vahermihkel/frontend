@@ -34,6 +34,7 @@ function EditProduct() {
       category: {
         id: categoryRef.current.value
       },
+      stock: product.stock,
       active: activeRef.current.checked
     }
     fetch("https://mihkel-java.herokuapp.com/products",{
