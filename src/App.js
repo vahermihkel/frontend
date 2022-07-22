@@ -8,6 +8,7 @@ import EditProduct from './pages/EditProduct';
 import MaintainProducts from './pages/MaintainProducts';
 import Cart from './pages/Cart';
 import Category from './pages/Category';
+import PaymentCompleted from './pages/PaymentCompleted';
 
 function App() {
 

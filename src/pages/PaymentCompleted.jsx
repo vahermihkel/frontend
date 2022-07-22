@@ -15,7 +15,7 @@ function PaymentCompleted() {
     }
     }).then(res => res.json())
     .then(data => setPaymentState(data.payment_state));
-  }, []);
+  }, [order_reference, payment_reference]);
 
   return ( <div>
     { paymentState === "settled" && <div>Makse on edukalt sooritatud</div>}
